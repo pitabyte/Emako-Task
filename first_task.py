@@ -10,6 +10,7 @@ def validateDate(date):
     except ValueError:
         print("Invalid date format. Correct argument format is shown below. (Make sure to omit brackets)\n"
               + "<YYYY:MM:DD>")
+        quit()
         
 def validateCityname(cityname):
     for letter in cityname:
@@ -54,6 +55,7 @@ if (date == DEFAULT_DATE):
         writer.writerow(header)
         writer.writerow(params)
         f.close()
+        print("Weather has been saved in a file '" + filename + ".csv'")
     else:
         print("City: " + cityname + " " + date + "\n"
         + "Temperature: " + temp + " degrees Celsius \n"
