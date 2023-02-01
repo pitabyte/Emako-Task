@@ -45,8 +45,8 @@ for target in [-2, -3]:
                 for supply in product["details"]["supply"]:
                     for stock in supply["stock_data"]:
                         if stock["stock_id"] == 1:
-                            supply += stock["quantity"]
-                all.append(supply)
+                            productSupply += stock["quantity"]
+                all.append(productSupply)
             productSupply = min(all)
             params = (str(datetime.datetime.now())[:19], str(id), str(variant_id), str(stock_id), str(productSupply))
             cursor.execute("INSERT INTO product_stocks (time, product_id, variant_id, stock_id, supply) VALUES (?, ?, ?, ?, ?)",
