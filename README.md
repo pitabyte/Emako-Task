@@ -13,5 +13,5 @@ History weather has TempMax and TempMin fields, but current weather only has Tem
 request happened at 1 AM, then saving TempMax and TempMin in a file for that day could be misleading for future use, because those values can be very different as the
 day progresses. 
 
-Essentially 'history weather' and 'current weather' are very different from each other, hence the division.
+Essentially 'history weather' and 'current weather' are different from each other, hence the division.
 
